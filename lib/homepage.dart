@@ -1,34 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:widgets/loginpage.dart';
 
-class MyApp extends StatelessWidget {
-  final appTitle = 'Flutter Drawer Demo';
+// class MyApp extends StatelessWidget {
+//   final appTitle = 'Flutter Drawer Demo';
 
-  const MyApp({Key? key}) : super(key: key);
+//   const MyApp({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: appTitle,
-      home: MyHomePage(title: appTitle),
-    ); // MaterialApp
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: appTitle,
+//       home: MyHomePage(title: appTitle),
+//     ); // MaterialApp
+//   }
+// }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class MyHomeApp extends StatelessWidget {
+  const MyHomeApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
-        backgroundColor: Colors.green,
+        title: const Text('Welcome'),
+        // backgroundColor: Colors.black,
       ),
       body: const Center(
           child: Text(
-        'A drawer is an invisible side screen.',
+        'Hello !!\n Welcome To My App',
         style: TextStyle(fontSize: 20.0),
       )),
       drawer: Drawer(
@@ -37,10 +36,10 @@ class MyHomePage extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.green,
+                color: Colors.deepPurpleAccent,
               ), //BoxDecoration
               child: UserAccountsDrawerHeader(
-                decoration: BoxDecoration(color: Colors.green),
+                decoration: BoxDecoration(color: Colors.deepPurpleAccent),
                 accountName: Text(
                   "Vatsal Patani",
                   style: TextStyle(fontSize: 18),
@@ -48,10 +47,10 @@ class MyHomePage extends StatelessWidget {
                 accountEmail: Text("vatsalpatni@gmail.com"),
                 currentAccountPictureSize: Size.square(50),
                 currentAccountPicture: CircleAvatar(
-                  backgroundColor: Color.fromARGB(255, 165, 255, 137),
+                  backgroundColor: Colors.indigo,
                   child: Text(
-                    "VP",
-                    style: TextStyle(fontSize: 30.0, color: Colors.blue),
+                    "V",
+                    style: TextStyle(fontSize: 30.0, color: Colors.white),
                   ), //Text
                 ), //circleAvatar
               ), //UserAccountDrawerHeader
@@ -60,26 +59,26 @@ class MyHomePage extends StatelessWidget {
               leading: const Icon(Icons.person),
               title: const Text(' My Profile '),
               onTap: () {
-                Navigator.pop(context);
+                // Navigator.pop(context);
               },
             ),
             ListTile(
               leading: const Icon(Icons.book),
               title: const Text(' My Course '),
               onTap: () {
-                Navigator.pop(context);
+                // Navigator.pop(context);
               },
             ),
             ListTile(
               leading: const Icon(Icons.workspace_premium),
               title: const Text(' Go Premium '),
               onTap: () {
-                Navigator.pop(context);
+                // Navigator.pop(context);
               },
             ),
             ListTile(
-              leading: const Icon(Icons.video_label),
-              title: const Text(' Saved Videos '),
+              leading: const Icon(Icons.calculate),
+              title: const Text(' Calc '),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -88,14 +87,16 @@ class MyHomePage extends StatelessWidget {
               leading: const Icon(Icons.edit),
               title: const Text(' Edit Profile '),
               onTap: () {
-                Navigator.pop(context);
+                // Navigator.pop(context);
               },
             ),
             ListTile(
               leading: const Icon(Icons.logout),
               title: const Text('LogOut'),
               onTap: () {
-                Navigator.pop(context);
+                // Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => LoginPage()));
               },
             ),
           ],
