@@ -1,8 +1,7 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 import 'package:widgets/homepage.dart';
 
+// ignore: must_be_immutable
 class LoginPage extends StatelessWidget {
   var username = '', password = '';
 
@@ -35,23 +34,6 @@ class LoginPage extends StatelessWidget {
               const SizedBox(
                 height: 20.0,
               ),
-              // Container(
-              //   height: 200,
-              //   width: double.infinity,
-              //   decoration: const BoxDecoration(
-              //     image: DecorationImage(
-              //         image: AssetImage("assets/images/windows.jpg"),
-              //         fit: BoxFit.cover),
-              //   ),
-              //   // child: // Foreground widget here
-              // ),
-              // Positioned.fill(
-              //   //
-              //   child: Image(
-              //     image: AssetImage('assets/images/windows1.jpg'),
-              //     fit: BoxFit.fill,
-              //   ),
-              // ),
               Padding(
                 padding: const EdgeInsets.symmetric(
                     vertical: 16.0, horizontal: 32.0),
@@ -84,8 +66,8 @@ class LoginPage extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(32, 12, 32, 12),
                       ),
                       onPressed: () {
-                        var name = "Vatsal";
-                        var pass = "rajubhai";
+                        var name = "vatsal";
+                        var pass = "1234";
                         if (name == username && pass == password) {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) =>

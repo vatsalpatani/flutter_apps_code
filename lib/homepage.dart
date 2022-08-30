@@ -25,11 +25,14 @@ class MyHomeApp extends StatelessWidget {
         title: const Text('Welcome'),
         // backgroundColor: Colors.black,
       ),
-      body: const Center(
-          child: Text(
-        'Hello !!\n Welcome To My App',
-        style: TextStyle(fontSize: 20.0),
-      )),
+      body: Column(
+        children: [
+          Image.asset(
+            "assets/images/wel.webp",
+            fit: BoxFit.cover,
+          ),
+        ],
+      ),
       drawer: Drawer(
         child: ListView(
           padding: const EdgeInsets.all(0),
