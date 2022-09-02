@@ -62,13 +62,15 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Scroll"),
       ),
-      body: SingleChildScrollView(
+      body: ListView(
         scrollDirection: Axis.horizontal,
         physics: const AlwaysScrollableScrollPhysics(),
-        child: CustomPaint(
-          size: const Size(2000.0, 2000.0),
-          foregroundPainter: circlePainter,
-        ),
+        children: [
+          CustomPaint(
+            size: const Size(2000.0, 2000.0),
+            foregroundPainter: circlePainter,
+          ),
+        ],
       ),
     );
   }
