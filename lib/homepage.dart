@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_4/fifth.dart';
 import 'package:flutter_application_4/nine.dart';
@@ -40,13 +39,11 @@ class MyHomeApp extends StatelessWidget {
         title: const Text('Welcome'),
         // backgroundColor: Colors.black,
       ),
-      body: Column(
-        children: [
-          Image.asset(
-            "assets/images/wel.webp",
-            fit: BoxFit.cover,
-          ),
-        ],
+      body: Center(
+        child: Image.asset(
+          "assets/images/wel.webp",
+          fit: BoxFit.cover,
+        ),
       ),
       drawer: Drawer(
         child: ListView(
