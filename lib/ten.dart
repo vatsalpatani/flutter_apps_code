@@ -1,24 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
-    );
-  }
-}
-
 class CirclePainter extends CustomPainter {
   final _random = Random();
   final List<Color> _colors = [];
@@ -53,9 +35,9 @@ class CirclePainter extends CustomPainter {
 }
 
 // ignore: must_be_immutable
-class MyHomePage extends StatelessWidget {
+class TenPage extends StatelessWidget {
   CirclePainter circlePainter = CirclePainter();
-  MyHomePage({Key? key}) : super(key: key);
+  TenPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,34 +1,17 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const StackPleaseWaitAppWidget());
-
-class StackPleaseWaitAppWidget extends StatelessWidget {
-  const StackPleaseWaitAppWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeWidget(title: 'Card Layout Demo'),
-    );
-  }
-}
-
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key? key, required this.title}) : super(key: key);
+class SecondPage extends StatefulWidget {
+  const SecondPage({Key? key, required this.title}) : super(key: key);
   final String title;
   final PleaseWaitWidget _pleaseWaitWidget =
       const PleaseWaitWidget(key: ObjectKey("pleaseWaitWidget"));
   final AppWidget _appWidget = const AppWidget(key: ObjectKey("appWidget"));
   @override
   // ignore: library_private_types_in_public_api
-  _HomeWidgetState createState() => _HomeWidgetState();
+  _SecondPageState createState() => _SecondPageState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _SecondPageState extends State<SecondPage> {
   bool _pleaseWait = false;
   void _togglePleaseWait() {
     setState(() {

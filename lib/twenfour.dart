@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
 class Order {
   final DateTime _dt;
   final String _description;
@@ -22,33 +20,13 @@ class Customer {
   String get name => _name;
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePageWidget(),
-      routes: <String, WidgetBuilder>{
-        '/customer': (context) => CustomerWidget(), // only simple routes work
-        '/order': (context) => const OrderWidget(), // only simple routes work
-      },
-    );
-  }
-}
-
-class HomePageWidget extends StatelessWidget {
+class Twentfour extends StatelessWidget {
   final List<Customer> _customerList = [
     Customer("Bike Corp", "Atlanta", []),
     Customer("Trust Corp", "Atlanta", []),
     Customer("Jilly Boutique", "Birmingham", []),
   ];
-  HomePageWidget({Key? key}) : super(key: key);
+  Twentfour({Key? key}) : super(key: key);
   void navigateToCustomer(BuildContext context, Customer customer) {
     Navigator.pushNamed(context, "/customer"); // only simple routes work
   }
@@ -137,31 +115,32 @@ class OrderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Order Info"),
+      appBar: AppBar(
+        title: const Text("Order Info"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: ListView(
+          children: const <Widget>[
+            Text("BikeCorp",
+                style: TextStyle(
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center),
+            Text("Atlanta",
+                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center),
+            Text(""),
+            Text("Bicycle Parts",
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center),
+            Text("12/1/2019 \$123.23",
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center)
+          ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: ListView(
-            children: const <Widget>[
-              Text("BikeCorp",
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center),
-              Text("Atlanta",
-                  style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center),
-              Text(""),
-              Text("Bicycle Parts",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center),
-              Text("12/1/2019 \$123.23",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center)
-            ],
-          ),
-        ));
+      ),
+    );
   }
 }

@@ -1,32 +1,14 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const ContainerApp());
-
-class ContainerApp extends StatelessWidget {
-  const ContainerApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeWidget(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key? key, required this.title}) : super(key: key);
+class FourPage extends StatefulWidget {
+  const FourPage({Key? key, required this.title}) : super(key: key);
   final String title;
   @override
   // ignore: library_private_types_in_public_api
-  _HomeWidgetState createState() => _HomeWidgetState();
+  _FourPageState createState() => _FourPageState();
 }
 
-class _HomeWidgetState extends State<HomeWidget>
+class _FourPageState extends State<FourPage>
     with SingleTickerProviderStateMixin {
   late Animation<double> _animation;
   late AnimationController _controller;

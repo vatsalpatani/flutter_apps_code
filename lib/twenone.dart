@@ -2,24 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomeWidget(),
-    );
-  }
-}
-
-class MyHomeWidget extends StatelessWidget {
+class TwentonePage extends StatelessWidget {
   final List<dynamic> _nasaOffices = [
     {
       "Name": "Mach 6, High Reynolds Number Facility",
@@ -38,7 +21,7 @@ class MyHomeWidget extends StatelessWidget {
       "Country": "US"
     }
   ];
-  MyHomeWidget({Key? key}) : super(key: key) {
+  TwentonePage({Key? key}) : super(key: key) {
     _nasaOffices.sort((a, b) => a['Name'].compareTo(b['Name']));
   }
   @override

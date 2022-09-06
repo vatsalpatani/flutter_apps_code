@@ -2,25 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(const TableApp());
-
-class TableApp extends StatelessWidget {
-  const TableApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeWidget(),
-    );
-  }
-}
-
-class HomeWidget extends StatelessWidget {
-  const HomeWidget({Key? key}) : super(key: key);
+class NinetennPage extends StatelessWidget {
+  const NinetennPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     const TableRow tableRow = TableRow(children: [

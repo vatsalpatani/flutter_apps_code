@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(const GridViewApp());
-
 class GridOptions {
   final int _crossAxisCountPortrait;
   final int _crossAxisCountLandscape;
@@ -18,30 +16,14 @@ class GridOptions {
   }
 }
 
-class GridViewApp extends StatelessWidget {
-  const GridViewApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeWidget(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key? key, required this.title}) : super(key: key);
+class FourteenPage extends StatefulWidget {
+  const FourteenPage({Key? key, required this.title}) : super(key: key);
   final String title;
   @override
-  _HomeWidgetState createState() => _HomeWidgetState();
+  _FourteenPageState createState() => _FourteenPageState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _FourteenPageState extends State<FourteenPage> {
   final List<Widget> _kittenTiles = [];
   int _gridOptionsIndex = 0;
   final List<GridOptions> _gridOptions = [
@@ -58,7 +40,7 @@ class _HomeWidgetState extends State<HomeWidget> {
     GridOptions(2, 3, 1.5, 10.0, 20.0),
     GridOptions(2, 3, 2.0, 10.0, 30.0),
   ];
-  _HomeWidgetState() : super() {
+  _FourteenPageState() : super() {
     for (int i = 200; i < 1000; i += 100) {
       String imageUrl = "http://placekitten.com/200/$i";
       _kittenTiles.add(GridTile(

@@ -2,31 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeWidget(),
-    );
-  }
-}
-
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key? key}) : super(key: key);
+class SevenPage extends StatefulWidget {
+  const SevenPage({Key? key}) : super(key: key);
   @override
   // ignore: library_private_types_in_public_api
-  _HomeWidgetState createState() => _HomeWidgetState();
+  _SevenPageState createState() => _SevenPageState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _SevenPageState extends State<SevenPage> {
   bool _topTightFit = false;
   bool _bottomExpanded = false;
   toggleTop() {

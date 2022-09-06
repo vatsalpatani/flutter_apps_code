@@ -2,32 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(const GestureApp());
-
-class GestureApp extends StatelessWidget {
-  const GestureApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeWidget(title: 'Gestures'),
-    );
-  }
-}
-
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key? key, required this.title}) : super(key: key);
+class EightPage extends StatefulWidget {
+  const EightPage({Key? key, required this.title}) : super(key: key);
   final String title;
   @override
-  _HomeWidgetState createState() => _HomeWidgetState();
+  _EightPageState createState() => _EightPageState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _EightPageState extends State<EightPage> {
   String _log = '';
   void _clear() {
     setState(() {

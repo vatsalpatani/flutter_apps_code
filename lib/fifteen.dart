@@ -1,35 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() => runApp(const MyApp());
-
 enum PopupMenuAction { add1, add10, add100, exit }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeWidget(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key? key, required this.title}) : super(key: key);
+class FifteenPage extends StatefulWidget {
+  const FifteenPage({Key? key, required this.title}) : super(key: key);
   final String title;
+
   @override
   // ignore: library_private_types_in_public_api
-  _HomeWidgetState createState() => _HomeWidgetState();
+  _FifteenPageState createState() => _FifteenPageState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _FifteenPageState extends State<FifteenPage> {
   int _counter = 0;
   void _increment(int by) {
     setState(() {

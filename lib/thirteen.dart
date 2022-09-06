@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
 class ExpansionPanelData {
   final String _title;
   final String _body;
@@ -17,31 +15,14 @@ class ExpansionPanelData {
 
   String get body => _body;
   bool get expanded => _expanded;
-  set expanded(bool value) {
-  }
+  set expanded(bool value) {}
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.green,
-        ),
-        home: const HomeWidget(),
-        showPerformanceOverlay: true);
-  }
-}
-
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key? key}) : super(key: key);
+class ThreenPage extends StatefulWidget {
+  const ThreenPage({Key? key}) : super(key: key);
 
   @override
-  _HomeWidgetState createState() => _HomeWidgetState([
+  _ThreenPageState createState() => _ThreenPageState([
         ExpansionPanelData(
             "Can I backup my data?",
             "dsfuysdiu fudsy fiusdyf "
@@ -85,10 +66,10 @@ class HomeWidget extends StatefulWidget {
       ]);
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _ThreenPageState extends State<ThreenPage> {
 // Track expansion panels, including expanded true/false;
   final List<ExpansionPanelData> _expansionPanelData;
-  _HomeWidgetState(this._expansionPanelData);
+  _ThreenPageState(this._expansionPanelData);
   _onExpansion(int panelIndex, bool isExpanded) {
 // Toggle the expanded state. Using setState will force 'build' to fire.
     setState(() {

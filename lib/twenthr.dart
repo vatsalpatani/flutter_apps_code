@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
 class Order {
   final DateTime _dt;
   final String _description;
@@ -22,23 +20,7 @@ class Customer {
   String get name => _name;
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePageWidget(),
-    );
-  }
-}
-
-class HomePageWidget extends StatelessWidget {
+class Twentthree extends StatelessWidget {
   final List<Customer> _customerList = [
     Customer("Bike Corp", "Atlanta", [
       Order(DateTime(2018, 11, 17), "Bicycle parts", 197.02),
@@ -55,7 +37,7 @@ class HomePageWidget extends StatelessWidget {
       Order(DateTime(2018, 3, 21), "Clothes rack", 97.15),
     ]),
   ];
-  HomePageWidget({Key? key}) : super(key: key);
+  Twentthree({Key? key}) : super(key: key);
   void navigateToCustomer(BuildContext context, Customer customer) {
     Navigator.push(
       context,

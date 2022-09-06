@@ -3,25 +3,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Future Builder App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeWidget(),
-    );
-  }
-}
-
-class HomeWidget extends StatefulWidget {
+class TwentyPage extends StatefulWidget {
   String computeListOfTimestamps(int count) {
     StringBuffer sb = StringBuffer();
     for (int i = 0; i < count; i++) {
@@ -36,12 +18,12 @@ class HomeWidget extends StatefulWidget {
     });
   }
 
-  const HomeWidget({Key? key}) : super(key: key);
+  const TwentyPage({Key? key}) : super(key: key);
   @override
-  _HomeWidgetState createState() => _HomeWidgetState();
+  _TwentyPageState createState() => _TwentyPageState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _TwentyPageState extends State<TwentyPage> {
   bool _showCalculation = false;
   void _onInvokeFuturePressed() {
     setState(() {

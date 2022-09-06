@@ -1,31 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-// This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeWidget(),
-    );
-  }
-}
-
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key? key}) : super(key: key);
+class ThirdPage extends StatefulWidget {
+  const ThirdPage({Key? key}) : super(key: key);
   @override
   // ignore: library_private_types_in_public_api
-  _HomeWidgetState createState() => _HomeWidgetState();
+  _ThirdPageState createState() => _ThirdPageState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _ThirdPageState extends State<ThirdPage> {
   // ignore: constant_identifier_names
   static const double TWENTY = 20.0;
   static const List<String> _titles = [

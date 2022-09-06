@@ -67,12 +67,10 @@ class BlocProvider extends InheritedWidget {
           .bloc;
 }
 
-void main() => runApp(NestedBuildersAppWidget());
-
-class NestedBuildersAppWidget extends StatelessWidget {
+class TwenttwoPage extends StatelessWidget {
   final Bloc _bloc = Bloc();
 
-  NestedBuildersAppWidget({Key? key}) : super(key: key);
+  TwenttwoPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
