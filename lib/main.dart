@@ -85,8 +85,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),
-                  enabledBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white, width: 0.0),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                        const BorderSide(color: Colors.white, width: 2.0),
+                    borderRadius: BorderRadius.circular(25.0),
                   ),
                   labelText: 'Enter a Number',
                   labelStyle: const TextStyle(color: Colors.white),
@@ -145,7 +147,6 @@ class _MyHomePageState extends State<MyHomePage> {
             bottom: 20,
             child: FloatingActionButton(
               backgroundColor: Colors.white,
-              //splashColor: Color.fromARGB(255, 255, 0, 0),
               foregroundColor: Colors.black,
               onPressed: _incrementCounter,
               tooltip: 'Increment',
@@ -157,7 +158,6 @@ class _MyHomePageState extends State<MyHomePage> {
             right: 30,
             child: FloatingActionButton(
               backgroundColor: Colors.white,
-              //splashColor: Color.fromARGB(255, 255, 0, 0),
               foregroundColor: Colors.black,
               onPressed: _decrementCounter,
               tooltip: 'Decrement',
