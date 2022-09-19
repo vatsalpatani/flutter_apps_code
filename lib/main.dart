@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: avoid_print
 
-void main() {
-  runApp(const MyApp());
-}
+import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -12,32 +13,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'My App',
-      theme: ThemeData(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 19, 25, 47),
-        primarySwatch: Colors.blue,
-      ),
-      home: //Home(),
-          const MyHomePage(title: 'Counting App'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+
   var title = '';
+
   String text = "No Value Entered";
 
   void _setText() {
@@ -64,119 +43,130 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  SpeedDial buildSpeedDial() {
+    return SpeedDial(
+      animatedIcon: AnimatedIcons.menu_close,
+      animatedIconTheme: const IconThemeData(size: 28.0),
+      backgroundColor: Colors.blueAccent,
+      visible: true,
+      curve: Curves.bounceInOut,
+      children: [
+        SpeedDialChild(
+          child: const Icon(Icons.add, color: Colors.white),
+          backgroundColor: Colors.blue,
+          onTap: _incrementCounter,
+          label: 'Increment',
+          labelStyle:
+              const TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
+          labelBackgroundColor: Colors.black,
+        ),
+        SpeedDialChild(
+          child: const Icon(Icons.remove, color: Colors.white),
+          backgroundColor: Colors.blue,
+          onTap: _decrementCounter,
+          label: 'Decrement',
+          labelStyle:
+              const TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
+          labelBackgroundColor: Colors.black,
+        ),
+        SpeedDialChild(
+          child: const Icon(Icons.exposure_zero_sharp, color: Colors.white),
+          backgroundColor: Colors.blue,
+          onTap: _reset,
+          label: 'Reset',
+          labelStyle:
+              const TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
+          labelBackgroundColor: Colors.black,
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        backgroundColor: Colors.blueAccent,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'My App',
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 19, 25, 47),
+        primarySwatch: Colors.blue,
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            const SizedBox(
-              height: 50,
-            ),
-            SizedBox(
-              width: 300,
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide:
-                        const BorderSide(color: Colors.white, width: 2.0),
-                    borderRadius: BorderRadius.circular(25.0),
-                  ),
-                  labelText: 'Enter a Number',
-                  labelStyle: const TextStyle(color: Colors.white),
-                  hintText: 'Enter a Number here',
-                  hintStyle:
-                      const TextStyle(fontSize: 20.0, color: Colors.white),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide:
-                        const BorderSide(color: Colors.white, width: 2.0),
-                    borderRadius: BorderRadius.circular(25.0),
-                  ),
-                ),
-                style: const TextStyle(color: Colors.white),
-                keyboardType: TextInputType.number,
-                onChanged: (value) => title = value,
-              ),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Align(
-              child: ElevatedButton.icon(
-                onPressed: _setText,
-                icon: const Icon(
-                  Icons.send,
-                ),
-                label: const Text('Submit'),
-              ),
-            ),
-            const SizedBox(
-              height: 80,
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Text(
-                'value = '
-                '$_counter',
-                style: TextStyle(
-                  fontSize: 40,
-                  foreground: Paint()
-                    ..style = PaintingStyle.stroke
-                    ..strokeWidth = 2
-                    ..color = Colors.blue[700]!,
-                ),
-              ),
-            ),
-          ],
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Counting App'),
+          backgroundColor: Colors.blue,
         ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: Stack(
-        fit: StackFit.expand,
-        children: [
-          Positioned(
-            left: 30,
-            bottom: 20,
-            child: FloatingActionButton(
-              backgroundColor: Colors.white,
-              foregroundColor: Colors.black,
-              onPressed: _incrementCounter,
-              tooltip: 'Increment',
-              child: const Icon(Icons.add),
-            ),
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              const SizedBox(
+                height: 50,
+              ),
+              SizedBox(
+                width: 300,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide:
+                          const BorderSide(color: Colors.white, width: 2.0),
+                      borderRadius: BorderRadius.circular(25.0),
+                    ),
+                    labelText: 'Enter a Number',
+                    labelStyle: const TextStyle(color: Colors.white),
+                    hintText: 'Enter a Number here',
+                    hintStyle:
+                        const TextStyle(fontSize: 20.0, color: Colors.white),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide:
+                          const BorderSide(color: Colors.white, width: 2.0),
+                      borderRadius: BorderRadius.circular(25.0),
+                    ),
+                  ),
+                  style: const TextStyle(color: Colors.white),
+                  keyboardType: TextInputType.number,
+                  onChanged: (value) => title = value,
+                ),
+              ),
+              const SizedBox(
+                height: 80,
+              ),
+              Align(
+                child: ElevatedButton.icon(
+                  onPressed: _setText,
+                  icon: const Icon(
+                    Icons.send,
+                  ),
+                  label: const Text('Submit'),
+                ),
+              ),
+              const SizedBox(
+                height: 100,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'value = '
+                  '$_counter',
+                  style: TextStyle(
+                    fontSize: 40,
+                    foreground: Paint()
+                      ..style = PaintingStyle.stroke
+                      ..strokeWidth = 2
+                      ..color = Colors.blue[700]!,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 150,
+              ),
+            ],
           ),
-          Positioned(
-            bottom: 20,
-            right: 30,
-            child: FloatingActionButton(
-              backgroundColor: Colors.white,
-              foregroundColor: Colors.black,
-              onPressed: _decrementCounter,
-              tooltip: 'Decrement',
-              child: const Icon(Icons.remove),
-            ),
-          ),
-          Positioned(
-            left: 90,
-            bottom: 20,
-            right: 90,
-            child: FloatingActionButton(
-              backgroundColor: Colors.white,
-              foregroundColor: Colors.black,
-              onPressed: _reset,
-              tooltip: 'Reset',
-              child: const Icon(Icons.exposure_zero_sharp),
-            ),
-          ),
-        ],
+        ),
+        floatingActionButton: buildSpeedDial(),
       ),
     );
   }
