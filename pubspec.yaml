@@ -36,9 +36,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_speed_dial: ^6.0.0
   flutter_launcher_icons: ^0.10.0
-  flutter_icons: 
-    android : "launchar_icon"
-    image_path : "assets\logo.png"
 
 dev_dependencies:
   flutter_test:
