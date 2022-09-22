@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../homepage.dart';
 
-
 // ignore: must_be_immutable
 class LoginPage extends StatelessWidget {
   var username = '', password = '';
@@ -64,7 +63,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.deepPurple,
+                        backgroundColor: Colors.deepPurple,
                         padding: const EdgeInsets.fromLTRB(32, 12, 32, 12),
                       ),
                       onPressed: () {
