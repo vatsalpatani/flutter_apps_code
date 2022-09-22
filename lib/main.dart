@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'homepage.dart';
-import 'loginpage.dart';
-
+import 'files/loginpage.dart';
+import 'homepage.dart';  
 void main() => runApp(const MyFirstPage());
 
 class MyFirstPage extends StatelessWidget {

@@ -1,34 +1,32 @@
-// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:flutter_application_4/fifth.dart';
-import 'package:flutter_application_4/nine.dart';
-import 'package:flutter_application_4/nineteen.dart';
-import 'package:flutter_application_4/second.dart';
-import 'package:flutter_application_4/six.dart';
-import 'package:flutter_application_4/third.dart';
-import 'package:flutter_application_4/twensix.dart';
-import 'package:flutter_application_4/twenty.dart';
+import 'package:flutter_application_4/files/eight.dart';
+import 'package:flutter_application_4/files/eighteen.dart';
+import 'package:flutter_application_4/files/fifteen.dart';
+import 'package:flutter_application_4/files/fifth.dart';
+import 'package:flutter_application_4/files/first.dart';
+import 'package:flutter_application_4/files/fourteen.dart';
+import 'package:flutter_application_4/files/fourth.dart';
+import 'package:flutter_application_4/files/loginpage.dart';
+import 'package:flutter_application_4/files/nine.dart';
+import 'package:flutter_application_4/files/nineteen.dart';
+import 'package:flutter_application_4/files/second.dart';
+import 'package:flutter_application_4/files/seven.dart';
+import 'package:flutter_application_4/files/seventeen.dart';
+import 'package:flutter_application_4/files/sixteen.dart';
+import 'package:flutter_application_4/files/third.dart';
+import 'package:flutter_application_4/files/twenfive.dart';
+import 'package:flutter_application_4/files/twenfour.dart';
+import 'package:flutter_application_4/files/twenone.dart';
+import 'package:flutter_application_4/files/twensix.dart';
+import 'package:flutter_application_4/files/twenthr.dart';
+import 'package:flutter_application_4/files/twentwo.dart';
+import 'package:flutter_application_4/files/twenty.dart';
 
-import 'eight.dart';
-import 'eighteen.dart';
-import 'ele.dart';
-import 'fifteen.dart';
-import 'first.dart';
-import 'fourteen.dart';
-import 'fourth.dart';
-import 'loginpage.dart';
-import 'seven.dart';
-import 'seventeen.dart';
-import 'sixteen.dart';
-import 'ten.dart';
-import 'thirteen.dart';
-import 'twe.dart';
-import 'twenfive.dart';
-import 'twenfour.dart';
-import 'twenone.dart';
-import 'twenthr.dart';
-import 'twentwo.dart';
-
+import 'files/ele.dart';
+import 'files/six.dart';
+import 'files/ten.dart';
+import 'files/thirteen.dart';
+import 'files/twe.dart';
 class MyHomeApp extends StatelessWidget {
   const MyHomeApp({Key? key}) : super(key: key);
 
@@ -133,7 +131,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => SixPage()));
+                    builder: (BuildContext context) => const SixPage()));
               },
             ),
             ListTile(
@@ -142,7 +140,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => SevenPage()));
+                    builder: (BuildContext context) => const SevenPage()));
               },
             ),
             ListTile(
@@ -151,7 +149,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => EightPage(
+                    builder: (BuildContext context) => const EightPage(
                           title: 'eight',
                         )));
               },
@@ -162,7 +160,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => NinePage()));
+                    builder: (BuildContext context) => const NinePage()));
               },
             ),
             ListTile(
@@ -180,7 +178,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => ElevenPage()));
+                    builder: (BuildContext context) => const ElevenPage()));
               },
             ),
             ListTile(
@@ -189,7 +187,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => TwelvePage(
+                    builder: (BuildContext context) => const TwelvePage(
                           title: 'twelve',
                         )));
               },
@@ -200,7 +198,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => ThreenPage()));
+                    builder: (BuildContext context) => const ThreenPage()));
               },
             ),
             ListTile(
@@ -209,7 +207,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => FourteenPage(
+                    builder: (BuildContext context) => const FourteenPage(
                           title: 'fourteen',
                         )));
               },
@@ -220,7 +218,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => FifteenPage(
+                    builder: (BuildContext context) => const FifteenPage(
                           title: 'fifteen',
                         )));
               },
@@ -240,7 +238,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => SeventeenPage()));
+                    builder: (BuildContext context) => const SeventeenPage()));
               },
             ),
             ListTile(
@@ -249,7 +247,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => EighteenPage()));
+                    builder: (BuildContext context) => const EighteenPage()));
               },
             ),
             ListTile(
@@ -258,7 +256,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => NinetennPage()));
+                    builder: (BuildContext context) => const NinetennPage()));
               },
             ),
             ListTile(
@@ -267,7 +265,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => TwentyPage()));
+                    builder: (BuildContext context) => const TwentyPage()));
               },
             ),
             ListTile(
@@ -312,7 +310,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => TwentyfivePage()));
+                    builder: (BuildContext context) => const TwentyfivePage()));
               },
             ),
             ListTile(
@@ -321,7 +319,7 @@ class MyHomeApp extends StatelessWidget {
               onTap: () {
                 // Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => Twentsix(
+                    builder: (BuildContext context) => const Twentsix(
                           title: 'twenty six',
                         )));
               },
@@ -337,7 +335,7 @@ class MyHomeApp extends StatelessWidget {
             ),
           ],
         ),
-      ), //Deawer
+      ),
     );
   }
 }
